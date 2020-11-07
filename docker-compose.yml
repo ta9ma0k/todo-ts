@@ -1,0 +1,13 @@
+version: '3'
+services: 
+  node:
+    container_name: react_ts
+    build: 
+      context: .
+    tty: true
+    environment: 
+      - NODE_ENV=production
+    volumes: 
+      - ./:/app
+    ports: 
+      - 3000:3000
